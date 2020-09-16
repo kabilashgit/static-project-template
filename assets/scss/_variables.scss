@@ -1,0 +1,27 @@
+// Font FuturaBt Regular - Bold
+$font-ft-bold: 'FuturaBT-Bold', sans-serif;
+
+// primary colors
+$black: #000000;
+$white: #ffffff;
+$yellow: #fee252;
+$red: #fb292a;
+$dark-red: #e9212d;
+$green: #4d9d1a;
+$dark-green: #008240;
+$light-grey: #aaaaaa;
+$lightest-grey: #ecedf0;
+$dark-grey: #3a3a3a;
+$blue: #142543;
+
+
+// Grid Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 575px,
+  md: 767px,
+  lg: 991px,
+  xl: 1199px,
+  xlm: 1399px,
+  xxl: 2499px
+);

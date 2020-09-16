@@ -1,0 +1,176 @@
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+p {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+ul, ol {
+  li {
+    font-size: 20px;
+    line-height: 25px;
+    ul, ol {
+      margin-left: 25px;
+    }
+  }
+}
+
+body {
+  background: $light-grey;
+  position: relative;
+  //font-family: $font-ft-bold;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+  text-transform: uppercase;
+  @include breakpoints-max(sm) {
+    margin-top: 60px;
+    min-height: calc(100vh - 60px);
+  }
+  overflow-x: hidden;
+}
+
+a {
+    &:hover {
+        color: inherit;
+    }
+}
+// Commonly used background colors
+.bg {
+  &-red{
+    background-color: $red !important;
+  }
+  &-yellow{
+    background-color: $yellow !important;
+  }
+  &-green{
+    background-color: $green !important;
+  }
+  &-white{
+    background-color: $white !important;
+  }
+  &-grey{
+    background-color: $lightest-grey !important;
+  }
+  &-dark-green{
+    background-color: $dark-green !important;
+  }
+}
+
+/* Commonly used text colors */
+.text {
+  &-red {
+    color: $red !important;
+  }
+  &-yellow {
+    color: $yellow !important;
+  }
+  &-green {
+    color: $green !important;
+  }
+  &-white {
+    color: $white !important;
+  }
+  &-black {
+    color: $black !important;
+  }
+}
+
+// No Scroll
+.no-scroll {
+  overflow: hidden;
+}
+
+.section-padding {
+    padding: 50px 15px;
+}
+
+/* Commonly used text colors */
+.text {
+    &-red {
+        color: $red !important;
+    }
+    &-yellow {
+        color: $yellow !important;
+    }
+    &-green {
+        color: $green !important;
+    }
+    &-white {
+        color: $white !important;
+    }
+    &-black {
+        color: $black !important;
+    }
+}
+
+/* owl carousel navigation center align and
+with animation */
+
+//.owl-carousel {
+//  overflow-x: hidden;
+//  .owl-nav {
+//    position: absolute;
+//    top: 50%;
+//    left: 0;
+//    right: 0;
+//    transform: translateY(-50%);
+//    .owl-prev {
+//      border-bottom-right-radius: 15px;
+//      border-top-right-radius: 15px;
+//      position: absolute;
+//      left: 0;
+//      opacity: .4;
+//      transition: opacity .25s ease-in-out;
+//      &:hover {
+//        opacity: 1;
+//      }
+//      &:focus {
+//        outline: none;
+//      }
+//      i {
+//        font-size: 15px;
+//        padding: 15px !important;
+//        display: inline-block;
+//        line-height: 0;
+//      }
+//      @include breakpoints-max(md) {
+//        opacity: 1;
+//      }
+//    }
+//    .owl-next {
+//      border-bottom-left-radius: 15px;
+//      border-top-left-radius: 15px;
+//      position: absolute;
+//      right: 0;
+//      opacity: .4;
+//      transition: opacity .25s ease-in-out;
+//      &:hover {
+//        opacity: 1;
+//      }
+//      &:focus {
+//        outline: none;
+//      }
+//      i {
+//        font-size: 15px;
+//        padding: 15px !important;
+//        display: inline-block;
+//        line-height: 0;
+//      }
+//      @include breakpoints-max(md) {
+//        opacity: 1;
+//      }
+//    }
+//  }
+//}
+

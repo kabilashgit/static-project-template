@@ -1,0 +1,77 @@
+/*
+    Created on : 6 November, 2019, 1:40:12 PM
+    Author     : Manikandan K
+*/
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+
+}
+
+@mixin breakpoints-min($min) {
+  @if (map_has_key($grid-breakpoints, $min)) {
+    @media (min-width: #{map-get($grid-breakpoints, $min)}) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoints-max($max) {
+  @if (map_has_key($grid-breakpoints, $max)) {
+    @media (max-width: #{map-get($grid-breakpoints, $max)}) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoints-min-max($min, $max) {
+  $min-v: map_has_key($grid-breakpoints, $min);
+  $max-v: map_has_key($grid-breakpoints, $max);
+
+  @if ($min-v == true and $max-v == true) {
+    @media(min-width: #{map-get($grid-breakpoints, $min)}) and (max-width: #{map-get($grid-breakpoints, $max)}) {
+      @content;
+    }
+  } @else if ($min-v == true and $max-v == false) {
+    @media(min-width: #{map-get($grid-breakpoints, $min)}) and (max-width: #{$max}) {
+      @content;
+    }
+  } @else if ($min-v == false and $max-v == true) {
+    @media(min-width: #{$min}) and (max-width: #{map-get($grid-breakpoints, $max)}) {
+      @content;
+    }
+  }
+  @else if ($min-v == false and $max-v == false) {
+    @media(min-width: #{$min}) and (max-width: #{$max}) {
+      @content;
+    }
+  }
+}
+
+@mixin background-gradient($dir, $from, $to) {
+  background-image:
+          -webkit-linear-gradient($dir, $from, $to),
+}
+
