@@ -2,3 +2,9 @@ node_modules/
 package-lock.json
 mix-manifest.json
 .idea
+.vscode
+*.map
+*.LICENSE.txt
+# comment below lines if you want to add final css & js files as part of your commit
+assest/js/*.min.*
+assest/css/*.min.*

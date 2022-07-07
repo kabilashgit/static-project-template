@@ -1,16 +1,22 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
-mix.options({
-  processCssUrls: false
-});
-
-mix.disableNotifications();
+mix
+  .options({
+    processCssUrls: false,
+  })
+  .webpackConfig({
+    stats: {
+      children: true,
+    },
+  })
+  .disableNotifications();
 
 mix.sass('./assets/scss/style.scss', './assets/css/all.min.css');
 
 
-mix.js('./assets/js/custom.js', './assets/js/all.min.js')
-    .autoload({
-      jquery: ['$', 'window.jQuery', 'jQuery']
-    })
-    .sourceMaps();
+mix
+  .js("./assets/working-js-files/custom.js", "./assets/js/all.min.js")
+  // .autoload({
+  //   jquery: ["$", "window.jQuery", "jQuery"],
+  // })
+  .sourceMaps();

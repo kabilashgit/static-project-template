@@ -7,7 +7,7 @@ Simple instruction to setup
 $ git clone https://github.com/kabilashgit/static-project-template.git
 $ cd <project-Directory>
 $ npm install
-$ php -S localhost:8000
+$ php -S localhost:8000 || php -S YOUR_LOCAL_IP:PORT
 $ npm run watch
 ```
 For production environments...
@@ -26,6 +26,9 @@ $data = [
   ]
 ]
 ```
+`Working js files` folder contains the 
+  - `custom js` file (write all your custom logics here)
+  - `vendor` folder for any 3rd party libraries
 
 # Frameworks & Library used
 
