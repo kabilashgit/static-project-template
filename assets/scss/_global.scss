@@ -51,7 +51,7 @@ a {
 *  className: .text--colorName || .bg--colorName
 *
 */
-@each $key, $val in ind.$colors-list {
+@each $key, $val in $colors-list {
   $col: null;
   @if (($key == green) or ($key == orange)) {
     $col: ind.$white;
