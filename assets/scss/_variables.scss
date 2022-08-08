@@ -14,6 +14,21 @@ $lightest-grey: #ecedf0;
 $dark-grey: #3a3a3a;
 $blue: #142543;
 
+// This color array is just duplicate of above colors. Just converted into an array.
+$colors-list: (
+  black: #000000,
+  white: #ffffff,
+  yellow: #fee252,
+  red: #fb292a,
+  dark-red: #e9212d,
+  green: #4d9d1a,
+  dark-green: #008240,
+  light-grey: #aaaaaa,
+  lightest-grey: #ecedf0,
+  dark-grey: #3a3a3a,
+  blue: #142543
+);
+
 
 // Grid Breakpoints
 $grid-breakpoints: (

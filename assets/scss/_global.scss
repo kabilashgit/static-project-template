@@ -45,44 +45,23 @@ a {
         color: inherit;
     }
 }
-// Commonly used background colors
-.bg {
-  &-red{
-    background-color: $red !important;
+/* Background & Text colors will be generated automatically 
+*  from the array list present in variables 
+*
+*  className: .text--colorName || .bg--colorName
+*
+*/
+@each $key, $val in ind.$colors-list {
+  $col: null;
+  @if (($key == green) or ($key == orange)) {
+    $col: ind.$white;
   }
-  &-yellow{
-    background-color: $yellow !important;
+  .bg--#{"" + $key} {
+    background-color: $val !important;
+    color: $col !important;
   }
-  &-green{
-    background-color: $green !important;
-  }
-  &-white{
-    background-color: $white !important;
-  }
-  &-grey{
-    background-color: $lightest-grey !important;
-  }
-  &-dark-green{
-    background-color: $dark-green !important;
-  }
-}
-
-/* Commonly used text colors */
-.text {
-  &-red {
-    color: $red !important;
-  }
-  &-yellow {
-    color: $yellow !important;
-  }
-  &-green {
-    color: $green !important;
-  }
-  &-white {
-    color: $white !important;
-  }
-  &-black {
-    color: $black !important;
+  .text--#{"" + $key} {
+    color: $val !important;
   }
 }
 
